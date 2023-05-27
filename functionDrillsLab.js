@@ -11,7 +11,7 @@
   Call the function.
 */
 //CODE HERE
-function helloWrold (){
+function helloWrold() {
   console.log('Hello, World!');
 }
 helloWrold()
@@ -24,12 +24,12 @@ helloWrold()
 
 //CODE HERE
 
-function jsNinja_1(){
-return 'I am a JavaScript ninja!'
+function jsNinja_1() {
+  return 'I am a JavaScript ninja!'
 }
 console.log(jsNinja_1());
 
-const jsNinja = () => {return '...and now I can write arrow functions'} 
+const jsNinja = () => { return '...and now I can write arrow functions' }
 console.log(jsNinja());
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -47,7 +47,8 @@ console.log(jsNinja());
 ////////////////////// ...why does problem #3 exist?  ///////////////
 let myName = 'David'
 const printName = () => {
-  console.log(myName);}
+  console.log(myName);
+}
 printName();
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -60,7 +61,7 @@ printName();
   Make sure to call your function and pass in an argument.
 */
 //CODE HERE
-const greeting = (name) => {console.log(`Hello ${name}`);}
+const greeting = (name) => { console.log(`Hello ${name}`); }
 greeting('David')
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -74,16 +75,14 @@ greeting('David')
 */
 
 //CODE HERE
-const compareNums = (num1, num2) =>{
-    if (num1 > num2){
-      return num1
-    }  
-      else if (num1 < num2){
-        return num2
-    } 
-        else {return 'the numbers are equal'}
+const compareNums = (num1, num2) => {
+  if (num1 > num2) {
+    return num1
+  } else {
+    return num2
   }
-  console.log(compareNums(4,6),compareNums(5,2),compareNums(3,3));
+}
+console.log(compareNums(4, 6), compareNums(5, 2), compareNums(3, 3));
 ////////////////// PROBLEM 6 ////////////////////
 /*
   Create a function called add that takes in two parameters 
@@ -91,11 +90,14 @@ const compareNums = (num1, num2) =>{
   The add function should RETURN the two parameters added together.
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
-const add = (num1, num2) => {
-return num1 + num2
-}
 //CODE HERE
-console.log(add(3,4));
+const add = (num1, num2) => {
+        Number(num1)
+                  Number(       num2)
+  return num1 + num2
+}
+let sum = add(6, 3)
+console.log(sum)
 ////////////////// PROBLEM 7 ////////////////////
 
 /*
@@ -103,7 +105,7 @@ console.log(add(3,4));
   Uncomment the correct `console.log` underneath.
 */
 
-const exclaim = function(str) {
+const exclaim = function (str) {
   return str.toUpperCase() + '!!!'
 }
 
@@ -214,7 +216,7 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 
 ////////////////// PROBLEM 15 ////////////////////
-let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
+let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107]
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr',  which will be an array of numbers. 
   Inside of the bigOrSmall function, create a new array called 'answers'. 
@@ -264,6 +266,13 @@ let sampleString = "Hi, my name is Kylo."
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
+let frogPrice = 3
+
+const buyFrogs = (gold) => {
+  return Math.floor(gold / frogPrice)
+}
+var totalFrogs = buyFrogs(7)
+console.log('frog purchase power =', totalFrogs);
 
 //CODE HERE
 
@@ -277,13 +286,23 @@ let sampleString = "Hi, my name is Kylo."
 
 
 ////////////////// PROBLEM 21 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0, 1, 2, 3, 4, 7, 6, 7, 8, 9]
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
-
+let counter = 0
+for (i = 0; i < (sampleArray.length - 1); i++) {
+  if (sampleArray[i] < sampleArray[i + 1]) {
+    counter++
+  }
+}
+if (counter === sampleArray.length - 1) {
+  console.log('true');
+} else console.log('false');
+console.log(counter);
+console.log(sampleArray.length - 1);
 
 ////////////////// PROBLEM 22 ////////////////////
 
