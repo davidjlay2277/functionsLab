@@ -10,10 +10,7 @@
   Call the function.
 */
 //CODE HERE
-function helloWrold() {
- 
-  
-}
+function helloWrold() {}
 helloWrold();
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -115,7 +112,7 @@ const exclaim = function (str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log("expression");
 
 ////////////////// PROBLEM 8 ////////////////////
 
@@ -128,7 +125,7 @@ const exclaimTwo = (str) => {
   return str.toUpperCase() + "!!!";
 };
 
-// console.log('arrow')
+console.log("arrow");
 // console.log('declaration')
 // console.log('expression')
 
@@ -138,7 +135,11 @@ const exclaimTwo = (str) => {
 
   Brownie points if you use a template string
 */
+const exclaimThree = (str) => {
+  console.log(`${str.toUpperCase()}!!!`);
+};
 
+exclaimThree("david");
 ////////////////// PROBLEM 9 ////////////////////
 
 /*
@@ -151,7 +152,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log("declaration");
 // console.log('expression')
 
 ////////////////// PROBLEM 10 ////////////////////
@@ -164,7 +165,18 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
-
+const nameCheck = (name1) => {
+  if (name1 === "Steven") {
+    console.log("What is up, Steven?");
+  } else if (name1 === "Brian") {
+    console.log("Hey Brian!");
+  } else {
+    console.log(`Cool name ${name1}`);
+  }
+};
+nameCheck("Steven");
+nameCheck("Brian");
+nameCheck("george");
 ////////////////// PROBLEM 11 ////////////////////
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
@@ -175,8 +187,28 @@ function exclaimFour(str) {
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
+// //CODE HERE
+// let faveColor
+const faveColorFinder = (str1) => {
+  if (str1.toLowerCase() === "red") {
+    let faveColor = "red is a great color";
+    return faveColor;
+  }
+  if (str1.toLowerCase() === "green") {
+    let faveColor = "green is a solid favorite color";
+    return faveColor;
+  }
+  if (str1.toLowerCase() === "black") {
+    let faveColor = "so trendy";
+    return faveColor;
+  }
+};
 
+console.log(faveColorFinder("red"));
+// console.log(faveColorFinder("reds"));
+// console.log(faveColorFinder("rED"));
+// console.log(faveColorFinder("black"));
+// console.log(faveColorFinder("green"));
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 /*
@@ -186,7 +218,12 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 */
 
 //CODE HERE
-
+const printAllNames = (arr1) => {
+  for (let i = 0; i < arr1.length; i++) {
+    console.log(arr1[i]);
+  }
+};
+printAllNames(namesArr);
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -196,6 +233,16 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 */
 
 //CODE HERE
+const thatsOdd = (num1) => {
+  if (num1 % 2 === 0) {
+    return "That's not odd!";
+  } else {
+    return "That is odd indeed!";
+  }
+};
+
+let oddChecker = thatsOdd(7);
+console.log(oddChecker);
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -208,7 +255,10 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 */
 
 //CODE HERE
-
+const bestMovie = (movieTitle) => {
+  return `${movieTitle} is the best movie ever`;
+};
+console.log(bestMovie("12 Angry Men"));
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
 /* 
@@ -221,6 +271,19 @@ let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
 */
 
 //CODE HERE
+
+const bigOrSmall = (arr1) => {
+  let answers = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] > 100) {
+      answers.push("Big");
+    } else {
+      answers.push("small");
+    }
+  }
+  return answers;
+};
+console.log(bigOrSmall(bigOrSmallArray));
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = [
@@ -241,7 +304,14 @@ let loser = "Glimmer";
 */
 
 //CODE HERE
-
+const theEliminator = (contestants, loser) => {
+  for (let i = 0; i < contestants.length; i++)
+    if (contestants[i] === loser) {
+      contestants.splice(i, 1);
+    }
+  return contestants;
+};
+console.log(theEliminator(contestants, loser));
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo.";
 /*
@@ -250,7 +320,11 @@ let sampleString = "Hi, my name is Kylo.";
 */
 
 //CODE HERE
-
+const upperCaser = (string1) => {
+ let allCaps = string1.toUpperCase();
+  return allCaps;
+};
+console.log(upperCaser(sampleString));
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -262,6 +336,14 @@ let sampleString = "Hi, my name is Kylo.";
   return 'must provide a valid email address'
 */
 
+function emailCheck(email) {
+let emailString = String(email).trim();
+if (emailString.includes("@") === true) {
+console.log(`email verified: ${emailString}`);}
+else console.log("must provide a valid email address")
+} 
+
+emailCheck("       david@gmail.com")
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -296,7 +378,7 @@ var totalFrogs = buyFrogs(7);
 //CODE HERE
 
 //////////// TEST FOR LOOP//////////
-// let counter = 0;
+
 
 // for (i = 0; i < sampleArray.length - 1; i++) {
 //   if (sampleArray[i] < sampleArray[i + 1]) {
@@ -313,13 +395,11 @@ let sampleArray1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let sampleArray2 = [0, 1, 2, 3, 4, 5, 800, 7, 8, 9];
 let sampleArray3 = [0, 1, 2, 3];
 let sampleArray4 = [0, 1, 300, 2];
-// let counter = 0;
 
 const ascending1 = (array1, arrayName) => {
   let counter = 0
   for (i = 0; i < array1.length - 1; i++) {
     if (array1[i] < array1[i + 1]) {
-      
       counter++;
     }
   }
